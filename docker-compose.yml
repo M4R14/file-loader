@@ -1,8 +1,9 @@
 version: '3'
 services:
   www:
-    image: php:7-alpine
-    working_dir: /app
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./lumen-init:/app
     ports: 
